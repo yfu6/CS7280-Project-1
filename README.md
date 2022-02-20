@@ -11,23 +11,23 @@ The Tree structure is shown by splitting'...', different level node would have d
 
 # One example of the Tree shown is :
 
-...  9 //first level
+...  9                    //first level
 
-......  3 6  //second level
+......  3 6               //second level
 
-.........  1 2  // third level
+.........  1 2            // third level
 
-.........  4 5 
+.........  4 5            // third level
 
-.........  7 8 
+.........  7 8            // third level
 
-......  12 15 
+......  12 15             //second level
 
-.........  10 11 
+.........  10 11          // third level
 
-.........  13 14 
+.........  13 14          // third level
 
-.........  16 17 18 19 20 
+.........  16 17 18 19 20 // third level
 
 
 # The code has accomplished these three functions according to the requirements:
