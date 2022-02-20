@@ -1,7 +1,11 @@
-# CS7280-Project-1
+# CS7280-Project-1 
+
 The assignment for CS7280
+
 YU FU-NUID001526550
+
 The BTree code is created based on the source code structure which is provided by the project materials. We set a deafault NODESIZE for 5 and it can be changed.
+
 The Tree structure is shown by splitting'...', different level node would have different number of'...'.
 
 One example of the Tree shown is :
