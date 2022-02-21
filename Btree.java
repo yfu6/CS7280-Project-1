@@ -19,8 +19,8 @@ final class Btree {
 
     /* Size of Node. */
     private static final int NODESIZE = 5;
-//    private static final int NODESIZE = 3;
 //    private static final int NODESIZE = 7;
+//    private static final int NODESIZE = 2;
 
     /* Node array, initialized with length = 1. i.e. root node */
     private Node[] nodes = new Node[1];
@@ -190,12 +190,16 @@ True.
     }
     /*
      * nodeInsert(int value, int pointer)
-     *    - -2 if the value already exists in the specified node
+     *    - -2 if the value already exists in the specified node or the NODESIZE < 3
      *    - -1 if the value is inserted into the node or
      *            something else if the parent node has to be restructured
      */
 
     private int nodeInsert(int value, int pointer) {
+        // The node would not be inserted if the NODESIZE < 3;
+        if(NODESIZE < 3){
+            return -2;
+        }
         // return -2 if the value already exists
         if(nodeLookup(value,pointer)){
             return -2;
