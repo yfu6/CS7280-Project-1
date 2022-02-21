@@ -37,7 +37,7 @@ True.
 
 • nodeInsert(int value): insert the specified value. 
 
-• treeDisplay(int node): print out the indexing tree structure under specified node.
+• Display(int node): print out the indexing tree structure under specified node.
 
 # Additional Function:
 
