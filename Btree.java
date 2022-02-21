@@ -19,6 +19,8 @@ final class Btree {
 
     /* Size of Node. */
     private static final int NODESIZE = 5;
+//    private static final int NODESIZE = 3;
+//    private static final int NODESIZE = 7;
 
     /* Node array, initialized with length = 1. i.e. root node */
     private Node[] nodes = new Node[1];
@@ -220,7 +222,7 @@ True.
     /*
       print out the indexing tree structure under specified node.
      */
-    private void treeDisplay(Node node, int level){
+    private void Display(Node node, int level){
         assert (node == null);
         System.out.print( "\n");
         for (int i = 0; i < level + 1; i++) {
@@ -234,7 +236,7 @@ True.
         // if x is not leaf node, continue run display on children nodes.
         if (!isLeaf(node)) {
             for (int i = 0; i < node.size + 1; i++) {
-                treeDisplay(nodes[node.children[i]], level + 1);
+                Display(nodes[node.children[i]], level + 1);
             }
         }
 
@@ -298,12 +300,12 @@ True.
         for (int i: testing) {
             b.Insert(i);
             System.out.println("Tree:");
-            b.treeDisplay(b.nodes[b.root], 0);
+            b.Display(b.nodes[b.root], 0);
             System.out.println("\n");
         }
         System.out.println(testing.length);
 
-        if (b.nodeLookup(3, b.root)) {
+        if (b.nodeLookup(10, b.root)) {
             System.out.println("\nfound");
         } else {
             System.out.println("\nnot found");
